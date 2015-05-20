@@ -1,10 +1,8 @@
-FROM java:openjdk-7u75
+FROM maven:3.3-jdk-7
 
 WORKDIR /work
 
 EXPOSE 3000
-
-RUN apt-get update && apt-get install maven -y
 
 # install dependencies
 ADD pom.xml /work/
@@ -17,4 +15,4 @@ RUN mkdir -p /work/logs
 ADD . /work
 
 # run web server on $PORT
-CMD mvn test
+CMD exec java -jar target/java-test-0.0.1.jar
