@@ -1,16 +1,17 @@
 language: java
 env:
   global:
-  - MISFIT_CLOUD_BUILDER_SERVER="52.6.42.144"
-  - MISFIT_CLOUD_BUILDER_USER="misfit"
-  - MISFIT_CLOUD_BUILDER_PASSWORD="User@123"
+  - ARES_SERVER="52.6.42.144"
+  - ARES_USER="misfit"
+  # ARES_PASSWORD=[secure]
+  - secure: "A/E4jgXZdFNFXO85TBSDOljdqhlD4l8ytewRg45qEfGalWaWOKCSh8F4A3cu/LIZFgkP2KgrBY8Dox8sAEzyPPJvaWzwO1yZjDMnjcA9m4BNL9UtSwtOKcY4x/E+5eqHnzKZX+V2aqP2okviw/6eZIAja1PRGrlSXsc7wJpYSgYTzQnVq/hkg74indf8ahAZ0l5fPzIOnixSSfy+7uCotGbYiT0qSzpvqSiTmTUDfoLhUw7hrnsjMBaFvBBQocqatqHtHJQDWCOHK86VWIE+GTydP+pIOkqUK7he9XKVAFTRkkKMuXc3JOoxzgy2ggavw9sPb19CKiADsadwWdwf5yZ4h5Thtpns21N/+4QK8tN85qhfpgm5HHHTDjNlOQnYhwbsPUb8fxUJIU4fQFkcMOzvgEWQ/7rOpHUunsA8OpUQr5ziDbbUa293SE15u0LNDoKaDbpxPO6wTqmXxHFcJkKkDf5u/+7c/XLyt5iEvL//dDCSwVHByFBuWf5WY1CHDa05Ic57SrCoN/IhU2nCr8bJdty5mTTugZPIduI4fu0CYAsXsZn/GNK54EsFedgdiHmY6XXhif8BmqupA9Ouqj9ccUWFbrv/l8EkVy09A6KDjSVZu8v7xoAWDu2ui10RtqfeFPM8ozDP2nOJ6qJABUtjJYegLDWAfNop5rIiWYg="
 
 before_script:
-- curl http://$MISFIT_CLOUD_BUILDER_SERVER/downloads/misfit-cloud-builder-client-linux-386.tar.gz | tar xzv
+# - curl http://$ARES_SERVER/downloads/ares-linux-386.tar.gz | tar xzv
 
 script:
 - mvn -Dfile.encoding=UTF-8 -Dproject.build.sourceEncoding=UTF-8 test
-- ./misfit-cloud-builder-client --travis
+# - ./ares
 
 after_success:
 - mvn -Dfile.encoding=UTF-8 -Dproject.build.sourceEncoding=UTF-8 clean cobertura:cobertura coveralls:report

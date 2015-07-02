@@ -1,2 +1,2 @@
-[![Build Status](https://travis-ci.org/forhot2000/java-test.svg?branch=master)](https://travis-ci.org/forhot2000/java-test)
-[![Coverage Status](https://coveralls.io/repos/forhot2000/java-test/badge.svg?branch=master)](https://coveralls.io/r/forhot2000/java-test?branch=master)
+[![Build Status](https://travis-ci.org/westmisfit/java-test.svg?branch=master)](https://travis-ci.org/westmisfit/java-test)
+[![Coverage Status](https://coveralls.io/repos/westmisfit/java-test/badge.svg?branch=master)](https://coveralls.io/r/westmisfit/java-test?branch=master)
