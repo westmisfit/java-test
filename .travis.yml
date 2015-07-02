@@ -3,6 +3,7 @@ env:
   global:
     - TRAVIS_EXT_HOME=$HOME/travis-ext
     - TRAVIS_EXT=$TRAVIS_EXT_HOME/travis-ext.sh
+    - PROJECT_LANGUAGE=java
     - ARES_SERVER="ares.int.misfit.com"
     - ARES_USER="misfit"
     # ARES_PASSWORD=[secure]
