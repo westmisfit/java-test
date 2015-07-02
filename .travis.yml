@@ -11,11 +11,11 @@ env:
 
 before_install:
   - git clone https://github.com/westmisfit/travis-ext.git $TRAVIS_EXT_HOME
-  - $TRAVIS_EXT before_intall
+  - $TRAVIS_EXT before_install
 
 script:
-  - $TRAVIS_EXT lint
   - $TRAVIS_EXT build
+  - $TRAVIS_EXT lint
   - $TRAVIS_EXT test
   - $TRAVIS_EXT custom_deploy
 
