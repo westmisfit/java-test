@@ -22,6 +22,10 @@ script:
 after_success:
   - $TRAVIS_EXT coveralls
 
+cache:
+  directories:
+    - $HOME/.m2
+
 # branches:
 #   only:
 #     - master
