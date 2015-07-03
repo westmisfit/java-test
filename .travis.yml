@@ -3,6 +3,7 @@ env:
   global:
     - TRAVIS_EXT_HOME=$HOME/travis-ext
     - TRAVIS_EXT=$TRAVIS_EXT_HOME/travis-ext.sh
+    - TRAVIS_EXT_OPTIONS="x"   # set 'x' to print all shell scripts
     - PROJECT_LANGUAGE=java
     - ARES_USER="misfit"
     # ARES_PASSWORD=[secure]
