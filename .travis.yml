@@ -31,10 +31,13 @@ cache:
     # cache maven downloads
     - $HOME/.m2
 
-# branches:
-#   only:
-#     - master
-#     - develop
+branches:
+  only:
+    - master
+    - develop
+    - /^feature\/.*/
+    - /^release\/.*/
+    - /^hotfix\/.*/
 
 # notifications:
 #   hipchat: C5Ta9DcFxSNftnD2ZMtfRJN2SbUtRLuGDQy6JXmI@1467331
