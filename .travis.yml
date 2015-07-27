@@ -18,11 +18,11 @@ before_install:
 install:
   - $TRAVIS_EXT maven_install
 script:
-  - false # test what happens when steps errored
-  - $TRAVIS_EXT build
-  - $TRAVIS_EXT lint
-  - $TRAVIS_EXT test
-  - $TRAVIS_EXT ares_deploy
+  - >
+    $TRAVIS_EXT build &&
+    $TRAVIS_EXT lint &&
+    $TRAVIS_EXT test &&
+    $TRAVIS_EXT ares_deploy
 after_script:
   - $TRAVIS_EXT coveralls
 
